@@ -62,6 +62,7 @@ calendar.init = function () {
     // Find today
     $('#return-button').click(function () {
         calendar.hideForms();
+        calendar.selectedDay = null;
         var date = new Date();
         calendar.create('calendar-container', date.getFullYear(), date.getMonth() + 1);
         calendar.eventsInsert();
@@ -70,6 +71,7 @@ calendar.init = function () {
     // Update button
     $('#update-btn').click(function () {
         calendar.hideForms();
+        calendar.selectedDay = null;
         var date = calendar.selectedDate;
         calendar.create('calendar-container', date.getFullYear(), date.getMonth() + 1);
         calendar.eventsInsert();
@@ -112,6 +114,8 @@ calendar.init = function () {
     // Highlight the day for which the event is intended
     // The default is the current date
     addBtn.click(function () {
+        calendar.hideEventFullForm();
+        calendar.hideFoundForm();
         if (calendar.selectedDay === null) {
             var card = calendarContainer.find('div.my-current-day');
             if (card.length) {
@@ -535,8 +539,9 @@ calendar.hideEventFullForm = function () {
 calendar.showEventFullForm = function(card) {
     var cardDate = $(card).data('date');
     var events = JSON.parse(localStorage.getItem('events'));
+    var cardEventName = '', cardEventDescription = '', cardEventMembers = '', cardEventDate = '';
     if (events !== null) {
-        var lsDate, cardEventName, cardEventDescription, cardEventMembers, cardEventDate;
+        var lsDate;
         for (lsDate in events) {
             if (events.hasOwnProperty(lsDate)) {
                 if (cardDate === lsDate) {
@@ -547,6 +552,7 @@ calendar.showEventFullForm = function(card) {
                 }
             }
         }
+    }
         $(card).popover({
             placement: 'right',
             html: true,
@@ -558,7 +564,7 @@ calendar.showEventFullForm = function(card) {
             })
         });
         $(card).popover('show');
-    }
+
 };
 
 /**
@@ -609,6 +615,9 @@ calendar.getFoundForm = function (foundObj) {
     return wrapper;
 };
 
+/**
+ * Hide found-form
+ */
 calendar.hideFoundForm = function () {
     $('#search-input').popover('hide');
 };
