@@ -1,0 +1,204 @@
+.panel {
+    height: 100px;
+    background-color: #f4f4f4;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    padding-top: 60px;
+    margin-bottom: 10px;
+    min-width: 940px;
+}
+
+
+.my-button-add {
+    margin-right: 10px;
+}
+
+.my-search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.my-search-icon-wrapper {
+    margin-right: 10px;
+}
+
+.my-search-icon {
+    color: #b3b3b3;
+}
+
+.my-search-input-wrapper {
+    width: 210px;
+}
+
+.my-control-container {
+    margin-bottom: 10px;
+}
+
+.my-caret-button,
+.my-return-button {
+    height: 18px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.my-caret-button {
+    width: 18px;
+}
+
+.my-return-button {
+    font-size: 13px;
+    line-height: 13px;
+    padding: 0 7px 0 7px;
+    margin-left: 10px;
+}
+
+.my-selected-date {
+    width: 120px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.my-card-body-wrapper {
+    outline: 0 solid #88beeb;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.my-card-body-wrapper-selected {
+    outline-width: 2px;
+}
+
+.popover {
+    max-width: 400px;
+}
+
+.my-add-event-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+.my-add-event-form-button-close {
+    cursor: pointer;
+}
+
+.my-add-event-form div {
+    margin-bottom: 5px;
+}
+
+.my-line-wrapper > div {
+    width: 100%;
+    min-width: 130px;
+    height: 130px;
+    border-top: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+
+}
+
+.my-line-wrapper > div:first-child {
+    border-left: 1px solid #ebebeb;
+}
+
+.my-last-line-wrapper > div {
+
+    border-bottom: 1px solid #ebebeb;
+}
+
+.my-first-line-wrapper > div:first-child {
+   border-radius: 5px 0 0 0;
+}
+
+.my-first-line-wrapper > div:last-child {
+   border-radius: 0 5px 0 0;
+}
+
+.my-last-line-wrapper > div:first-child {
+    border-radius: 0 0 0 5px;
+}
+
+.my-last-line-wrapper > div:last-child {
+    border-radius: 0 0 5px 0;
+}
+
+.card {
+    font-size: .8rem;
+    border: 0;
+    border-radius: 0;
+}
+
+.my-current-day {
+    background-color: #f4f4f4;
+}
+
+.card-header {
+    padding: .5rem .5rem;
+    background-color: inherit;
+    font-size: .8rem;
+    border-bottom: 0;
+    font-weight: 100;
+}
+
+.my-current-day > div.card-header {
+    font-weight: 500;
+}
+
+.card-body {
+    border: 0;
+    padding: 0 .5rem;
+}
+
+.card-title {
+    font-size: .8rem;
+    margin-bottom: 0;
+}
+
+.card-footer {
+    border: 0;
+    padding: 0;
+    background-color: inherit;
+}
+
+.my-card-footer-date {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.my-add-event-form-found {
+    height: 400px;
+    justify-content: flex-start;
+}
+
+.my-founds-wrapper {
+    overflow: auto;
+}
+
+.my-found-wrapper {
+    border-bottom: 1px solid #ebebeb;
+    padding: 5px;
+}
+
+.my-found-wrapper:last-child {
+    border: 0;
+}
+
+.my-found-wrapper:hover {
+    background-color: #189fff;
+    color: #fff;
+}
+
+.my-found-wrapper>div {
+    margin: 0;
+}
+
+.my-found-wrapper>div:first-child {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.my-found-wrapper>div:last-child {
+    font-size: 11px;
+}
